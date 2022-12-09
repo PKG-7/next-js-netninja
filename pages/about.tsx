@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.scss';
+interface Props {
+  //   text: string;
+}
 
-export default function Home() {
+export default function About({}: Props) {
   return (
-    <div className={styles.container}>
-      <h1>Homepage</h1>
+    <div className='text-center'>
+      <h1>About</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, incidunt
         nulla debitis doloremque aliquam atque. Obcaecati laboriosam ut saepe
