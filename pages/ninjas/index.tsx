@@ -18,11 +18,11 @@ export default function Ninjas({ ninjas }: Props) {
     <div className='text-center'>
       <h1>All ninjas</h1>
       {ninjas.map(ninja => (
-        <div key={ninja.id}>
-          <a className={styles.single} href=''>
+        <Link href={'/ninjas/' + ninja.id} key={ninja.id}>
+          <p className={styles.single}>
             <h3>{ninja.name}</h3>
-          </a>
-        </div>
+          </p>
+        </Link>
       ))}
     </div>
   );
