@@ -8,17 +8,31 @@ export const getStaticPaths = async () => {
     };
   });
 
-  return { paths, fallback: false };
+  return {
+    paths,
+    fallback: false,
+  };
 };
 
-interface Props {
-  //   text: string;
-}
+export const getStaticProps = async context => {
+  const id = context.params.id;
+  const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
+  const data = await res.json();
 
-export default function Details({}: Props) {
+  return {
+    props: { ninja: data },
+  };
+};
+
+const Details = ({ ninja }) => {
   return (
-    <div className='text-center'>
-      <h1>Details page</h1>
+    <div>
+      <h1>{ninja.name}</h1>
+      <p>{ninja.email}</p>
+      <p>{ninja.website}</p>
+      <p>{ninja.address.city}</p>
     </div>
   );
-}
+};
+
+export default Details;
