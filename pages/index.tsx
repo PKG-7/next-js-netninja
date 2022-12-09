@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.scss';
@@ -19,6 +20,7 @@ export default function Home() {
         similique inventore exercitationem repudiandae deserunt fuga, enim
         nulla. Officiis, vitae facere!
       </p>
+      <Link href='/ninjas'>See ninja Listing</Link>
       <Footer />
     </div>
   );
