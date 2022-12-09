@@ -9,7 +9,9 @@ export default function Navbar({}: Props) {
   return (
     <nav>
       <div className='logo'>
-        <Image src='/logo.png' width={128} height={77} alt='logo' priority />
+        <Link href='/'>
+          <Image src='/logo.png' width={128} height={77} alt='logo' priority />
+        </Link>
       </div>
       <Link href='/'>Home</Link>
       <Link href='/about'>About</Link>
