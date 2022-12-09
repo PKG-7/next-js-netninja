@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Navbar />
       <h1>Homepage</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, incidunt
@@ -16,6 +19,7 @@ export default function Home() {
         similique inventore exercitationem repudiandae deserunt fuga, enim
         nulla. Officiis, vitae facere!
       </p>
+      <Footer />
     </div>
   );
 }
