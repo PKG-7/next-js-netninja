@@ -3,5 +3,5 @@ interface Props {
 }
 
 export default function Footer({}: Props) {
-  return <div>Copyright 2022 Ninja List</div>;
+  return <footer>Copyright 2022 Ninja List</footer>;
 }

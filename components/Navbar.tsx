@@ -7,7 +7,7 @@ interface Props {
 export default function Navbar({}: Props) {
   return (
     <nav>
-      <div>
+      <div className='logo'>
         <h1>Ninja List</h1>
       </div>
       <Link href='/'>Home</Link>
